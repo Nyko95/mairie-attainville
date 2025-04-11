@@ -1,0 +1,23 @@
+// Importation des variables
+@import "./theme";
+@import "./composants/_hero.scss";
+@import "./composants/_services-carousel";
+@import "./composants/actus";
+@import "./composants/single";
+@import "./composants/archive-actualites";
+
+// Styles globaux
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+.logo-container {
+  text-align: center; /* Centrer le logo */
+  margin-bottom: 20px; /* Ajouter de l'espace sous le logo */
+}
+
+.logo-container img {
+  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Garder les proportions de l'image */
+  width: 200px; /* Ajuster la largeur du logo */
+}

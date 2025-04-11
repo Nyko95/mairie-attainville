@@ -1,0 +1,67 @@
+.single-actualite {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  .breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    a {
+      color: #666;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      color: #000;
+    }
+  }
+
+  .actu-title {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .actu-date {
+    color: #888;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .actu-thumbnail {
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  }
+
+  .actu-texte {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .actu-share {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    span {
+      margin-right: 1rem;
+    }
+    i {
+      font-size: 1.4rem;
+      color: #444;
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: scale(1.2);
+        color: #0073aa;
+      }
+    }
+  }
+}

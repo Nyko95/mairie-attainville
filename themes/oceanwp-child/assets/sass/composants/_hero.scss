@@ -1,0 +1,41 @@
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* hauteur de l'écran */
+  color: #fff; /* texte en blanc */
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: #ff5733; /* couleur du bouton */
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #c70039; /* couleur du bouton au survol */
+      }
+    }
+  }
+}

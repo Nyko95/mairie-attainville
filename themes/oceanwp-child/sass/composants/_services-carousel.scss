@@ -1,0 +1,41 @@
+.services-carousel {
+  position: relative;
+  margin-top: -100px; // chevauchement sur le hero
+  z-index: 2;
+
+  .swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .swiper-slide {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #4caf50;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+}
