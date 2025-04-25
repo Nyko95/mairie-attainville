@@ -44,3 +44,53 @@ function oceanwp_child_enqueue_fonts() {
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 }
 add_action('wp_enqueue_scripts', 'oceanwp_child_enqueue_fonts');
+
+// ==============================================
+// Déclaration du CPT "rendez-vous"
+// ==============================================
+function custom_post_type_rendez_vous() {
+    $labels = array(
+        'name'               => 'Rendez-vous',
+        'singular_name'      => 'Rendez-vous',
+        'menu_name'          => 'Rendez-vous',
+        'name_admin_bar'     => 'Rendez-vous',
+        'add_new'            => 'Ajouter',
+        'add_new_item'       => 'Ajouter un rendez-vous',
+        'new_item'           => 'Nouveau rendez-vous',
+        'edit_item'          => 'Modifier le rendez-vous',
+        'view_item'          => 'Voir le rendez-vous',
+        'all_items'          => 'Tous les rendez-vous',
+        'search_items'       => 'Rechercher un rendez-vous',
+        'not_found'          => 'Aucun rendez-vous trouvé',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'rewrite'            => array('slug' => 'evenements'),
+        'menu_icon'          => 'dashicons-calendar-alt',
+        'supports'           => array('title', 'editor', 'thumbnail'),
+        'show_in_rest'       => true,
+    );
+
+    register_post_type('rendez-vous', $args);
+}
+add_action('init', 'custom_post_type_rendez_vous');
+
+function create_post_type_rendez_vous() {
+    $args = array(
+        'labels' => array(
+            'name' => 'Rendez-vous',
+            'singular_name' => 'Rendez-vous',
+        ),
+        'public' => true,
+        'has_archive' => true,  // Permet l'archive pour le CPT
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'rewrite' => array('slug' => 'evenements'),  // Slug de l'archive
+        'show_in_rest' => true,  // Pour l'intégration avec l'éditeur Gutenberg
+    );
+    register_post_type('rendez-vous', $args);
+}
+
+add_action('init', 'create_post_type_rendez_vous');

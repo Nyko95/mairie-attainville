@@ -87,5 +87,19 @@
   </div>
 </section>
 
+<?php get_template_part('template-parts/section', 'agenda'); ?>
+
+<!-- Section Publications à lire -->
+<section class="publications-section">
+  <div class="section-title">
+    <span class="sur-titre"><i class="fa fa-book"></i> Publications</span>
+    <h2>À <span>LIRE</span></h2>
+  </div>
+
+  <div class="publications-placeholder">
+    <p>Les journaux municipaux seront bientôt disponibles ici.</p>
+    <!-- À terme : intégrer ici un carrousel ou une grille de PDF -->
+  </div>
+</section>
 
 <?php get_footer(); ?>

@@ -1,0 +1,186 @@
+.agenda-section {
+  padding: 6rem 1rem;
+  background-color: #fff;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 6rem;
+
+    .sur-titre {
+      display: block;
+      font-size: 4rem;
+      color: #666;
+      margin-bottom: 0.3rem;
+      margin-top: 4rem;
+      margin-right: 15rem;
+
+      i {
+        margin-right: 0.5rem;
+        color: #28a745;
+      }
+    }
+
+    h2 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      padding: 0 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 2px;
+        background-color: #4caf50;
+      }
+
+      &::before {
+        left: -70px;
+      }
+
+      &::after {
+        right: -70px;
+      }
+
+      span {
+        font-size: 5rem;
+        display: block;
+        font-weight: 900;
+        line-height: 1;
+        color: #111;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #555;
+    }
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .event-item {
+    background-color: #fff; /* Légèrement modifié pour plus de clarté */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+
+      .event-thumb {
+        height: 220px; /* Augmente un peu la taille des images */
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        color: #333;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: #28a745;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #1e7e34;
+        }
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+
+    /* Ajouter une légère animation au survol de l'événement */
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  /* Masquer la date de publication, le nom d'utilisateur et le lien 'edit' */
+  .posted-on,
+  .author,
+  .edit-link {
+    display: none;
+  }
+
+  .view-all-events {
+    margin-top: 3rem;
+    text-align: center;
+
+    .btn {
+      padding: 1rem 2rem;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #1e7e34;
+      }
+    }
+  }
+
+  /* Responsivité : ajuster la taille des images et des colonnes */
+  @media (max-width: 768px) {
+    .events-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .event-item {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

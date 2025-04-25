@@ -30,10 +30,10 @@
       font-size: 1rem;
       background: transparent;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
-      color: #4caf50; // vert mairie
+      color: black;
 
       &::placeholder {
-        color: #4caf50;
+        color: black;
         opacity: 1;
       }
     }
@@ -47,7 +47,7 @@
       cursor: pointer;
 
       i {
-        color: #4caf50;
+        color: black;
       }
     }
   }

@@ -1,0 +1,50 @@
+.mes-demarches-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0b555a;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center; // Centrer le titre
+}
+
+.demarches-section {
+  padding: 2rem 0;
+  background: #f8f9fa;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background-color: #0b555a;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    display: inline-block;
+  }
+}
+
+.demarches-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.75rem;
+
+    a {
+      color: #0b555a;
+      text-decoration: none;
+      font-weight: bold;
+
+      &::before {
+        content: "›";
+        margin-right: 0.5rem;
+        color: #0b555a;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

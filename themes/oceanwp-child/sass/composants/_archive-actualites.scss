@@ -1,60 +1,87 @@
+.archive-header {
+  margin-bottom: 2rem; // Espacement sous l'entête (titre + nombre de résultats)
+  text-align: center; // Centrer le contenu (si ce n'est pas déjà le cas)
+
+  h1 {
+    font-size: 4.5rem; // Taille du titre
+    font-weight: 700; // Poids du texte
+    color: #0b555a; // Couleur du titre (ou la couleur que tu préfères)
+    margin-top: 7rem;
+    margin-bottom: 4rem; // Espacement entre le titre et le texte en dessous
+  }
+
+  .result-count {
+    font-size: 1.5rem; // Taille du texte pour le nombre de résultats
+    color: #555; // Couleur grise pour le texte
+    margin-top: 0; // Enlever toute marge top par défaut (si nécessaire)
+    margin-bottom: 4rem; // Espacement entre le texte et les actualités
+  }
+}
+
 .archive-actualites {
-  padding: 5rem 1rem;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .archive-header {
-    margin-bottom: 3rem;
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .result-count {
-      font-size: 1rem;
-      color: #666;
-    }
-  }
-
   .actus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr); // Deux cartes par ligne
+    gap: 2rem; // Espacement entre les cartes
+    margin-bottom: 3rem; // Espacement en bas de la grille
   }
 
   .actu-item {
-    background: #f9f9f9;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff; // Fond blanc pour les cartes
+    border-radius: 10px; // Coins arrondis
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Ombre légère
+    overflow: hidden; // Pour éviter que l'image dépasse
+    transition: all 0.3s ease; // Transition pour les effets au survol
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px); // Effet de survol pour un léger soulèvement
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); // Ombre renforcée au survol
     }
 
-    .actu-img img {
+    .actu-img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: 200px; // Fixe la taille de l'image
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Pour bien couvrir l'espace
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; // Coins arrondis en haut de l'image
+      }
     }
 
     .actu-content {
-      padding: 1.2rem;
+      padding: 1.5rem;
+      color: #333; // Texte sombre pour un bon contraste
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.8rem; // Augmenter la taille du titre
+        font-weight: 700; // Police en gras pour plus de poids
+        color: #0b555a; // Couleur du titre, un vert sombre pour le contraste
+        margin: 0;
+        transition: color 0.3s ease; // Transition pour le changement de couleur au survol
+
+        &:hover {
+          color: #0073aa; // Change de couleur lors du survol pour le rendre plus dynamique
+        }
+      }
+
+      .actu-date {
+        font-size: 1rem;
+        color: #777;
       }
 
       p {
-        font-size: 0.95rem;
-        color: #444;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 1.5rem; // Espacement en bas du texte
       }
     }
   }
@@ -64,23 +91,22 @@
     text-align: center;
 
     .page-numbers {
-      display: inline-block;
-      margin: 0 0.5rem;
-      padding: 0.6rem 1rem;
-      background: #eee;
+      padding: 8px 16px;
+      background-color: #f5f5f5;
       border-radius: 6px;
+      margin: 0 4px;
       text-decoration: none;
       color: #333;
+      font-size: 1rem;
+    }
 
-      &.current {
-        background: #000;
-        color: #fff;
-      }
+    .page-numbers.current {
+      background-color: #0b555a;
+      color: white;
+    }
 
-      &:hover {
-        background: #333;
-        color: #fff;
-      }
+    .page-numbers:hover {
+      background-color: #ddd;
     }
   }
 }

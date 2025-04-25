@@ -97,6 +97,20 @@ h6 {
     margin-bottom: 1rem;
   }
 }
+#site-navigation-wrap .dropdown-menu > li.menu-important > a {
+  background-color: #0b555a !important;
+  color: white !important;
+  padding: 0.3rem 1rem !important;
+  margin-top: -6px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+}
+#site-navigation-wrap .dropdown-menu > li.menu-important > a:hover {
+  background-color: transparent !important;
+  color: #0b555a !important;
+}
+
 .hero {
   position: relative;
   height: 80vh;
@@ -128,10 +142,10 @@ h6 {
   font-size: 1rem;
   background: transparent;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
-  color: #4caf50;
+  color: black;
 }
 .hero .search-form .search-field::placeholder {
-  color: #4caf50;
+  color: black;
   opacity: 1;
 }
 .hero .search-form .search-submit {
@@ -143,7 +157,7 @@ h6 {
   cursor: pointer;
 }
 .hero .search-form .search-submit i {
-  color: #4caf50;
+  color: black;
 }
 
 .services-carousel {
@@ -193,16 +207,18 @@ h6 {
 }
 .section-title .sur-titre {
   display: block;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #666;
   margin-bottom: 0.3rem;
+  margin-top: 4rem;
+  margin-right: 15rem;
 }
 .section-title .sur-titre i {
   margin-right: 0.5rem;
   color: #28a745;
 }
 .section-title h2 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -216,7 +232,7 @@ h6 {
   top: 50%;
   width: 60px;
   height: 2px;
-  background-color: #ccc;
+  background-color: #4caf50;
 }
 .section-title h2::before {
   left: -70px;
@@ -225,7 +241,7 @@ h6 {
   right: -70px;
 }
 .section-title h2 span {
-  font-size: 3.5rem;
+  font-size: 5rem;
   display: block;
   font-weight: 900;
   line-height: 1;
@@ -304,27 +320,37 @@ h6 {
 }
 .single-actualite .breadcrumb {
   margin-bottom: 2rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
 }
 .single-actualite .breadcrumb a {
-  color: #666;
+  color: #28a745;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 .single-actualite .breadcrumb a:hover {
-  text-decoration: underline;
+  color: #0056b3;
 }
 .single-actualite .breadcrumb span {
-  color: #000;
+  color: #333;
+  font-weight: bold;
 }
 .single-actualite .actu-title {
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   font-weight: 700;
+  text-align: center;
+  color: #0b555a;
 }
 .single-actualite .actu-date {
-  color: #888;
+  font-size: 1.5rem;
+  color: #28a745;
   margin-bottom: 2rem;
-  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
 }
 .single-actualite .actu-thumbnail {
   margin-bottom: 2rem;
@@ -335,100 +361,545 @@ h6 {
   border-radius: 12px;
   object-fit: cover;
 }
+.single-actualite .actu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.single-actualite .actu-meta p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+.single-actualite .actu-meta p i {
+  color: #28a745;
+  font-size: 1.5rem;
+}
 .single-actualite .actu-texte {
   font-size: 1.1rem;
   line-height: 1.7;
+  color: #444;
   margin-bottom: 3rem;
 }
-.single-actualite .actu-share {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 600;
+.single-actualite .actu-link {
+  text-align: center;
 }
-.single-actualite .actu-share span {
-  margin-right: 1rem;
+.single-actualite .actu-link .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
-.single-actualite .actu-share i {
-  font-size: 1.4rem;
-  color: #444;
-  transition: transform 0.2s ease;
-}
-.single-actualite .actu-share i:hover {
-  transform: scale(1.2);
-  color: #0073aa;
+.single-actualite .actu-link .btn:hover {
+  background-color: #218838;
 }
 
-.archive-actualites {
-  padding: 5rem 1rem;
+.archive-header {
+  margin-bottom: 2rem;
+  text-align: center;
 }
-.archive-actualites .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.archive-actualites .archive-header {
-  margin-bottom: 3rem;
-}
-.archive-actualites .archive-header h1 {
-  font-size: 2.8rem;
+.archive-header h1 {
+  font-size: 4.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: #0b555a;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
 }
-.archive-actualites .archive-header .result-count {
-  font-size: 1rem;
-  color: #666;
+.archive-header .result-count {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 4rem;
 }
+
 .archive-actualites .actus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 .archive-actualites .actu-item {
-  background: #f9f9f9;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 .archive-actualites .actu-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.archive-actualites .actu-item .actu-img {
+  width: 100%;
+  height: 200px;
 }
 .archive-actualites .actu-item .actu-img img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .archive-actualites .actu-item .actu-content {
-  padding: 1.2rem;
+  padding: 1.5rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .archive-actualites .actu-item .actu-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0b555a;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.archive-actualites .actu-item .actu-content h3:hover {
+  color: #0073aa;
+}
+.archive-actualites .actu-item .actu-content .actu-date {
+  font-size: 1rem;
+  color: #777;
 }
 .archive-actualites .actu-item .actu-content p {
-  font-size: 0.95rem;
-  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 .archive-actualites .pagination {
   margin-top: 3rem;
   text-align: center;
 }
 .archive-actualites .pagination .page-numbers {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0.6rem 1rem;
-  background: #eee;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
   border-radius: 6px;
+  margin: 0 4px;
   text-decoration: none;
   color: #333;
+  font-size: 1rem;
 }
 .archive-actualites .pagination .page-numbers.current {
-  background: #000;
-  color: #fff;
+  background-color: #0b555a;
+  color: white;
 }
 .archive-actualites .pagination .page-numbers:hover {
-  background: #333;
+  background-color: #ddd;
+}
+
+.agenda-section {
+  padding: 6rem 1rem;
+  background-color: #fff;
+  text-align: center;
+  /* Masquer la date de publication, le nom d'utilisateur et le lien 'edit' */
+  /* Responsivité : ajuster la taille des images et des colonnes */
+}
+.agenda-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.agenda-section .section-header {
+  margin-bottom: 6rem;
+}
+.agenda-section .section-header .sur-titre {
+  display: block;
+  font-size: 4rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+  margin-top: 4rem;
+  margin-right: 15rem;
+}
+.agenda-section .section-header .sur-titre i {
+  margin-right: 0.5rem;
+  color: #28a745;
+}
+.agenda-section .section-header h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+}
+.agenda-section .section-header h2::before, .agenda-section .section-header h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #4caf50;
+}
+.agenda-section .section-header h2::before {
+  left: -70px;
+}
+.agenda-section .section-header h2::after {
+  right: -70px;
+}
+.agenda-section .section-header h2 span {
+  font-size: 5rem;
+  display: block;
+  font-weight: 900;
+  line-height: 1;
+  color: #111;
+}
+.agenda-section .section-header p {
+  font-size: 1.5rem;
+  color: #555;
+}
+.agenda-section .events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+}
+.agenda-section .event-item {
+  background-color: #fff; /* Légèrement modifié pour plus de clarté */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  /* Ajouter une légère animation au survol de l'événement */
+}
+.agenda-section .event-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.agenda-section .event-item a .event-thumb {
+  height: 220px; /* Augmente un peu la taille des images */
+  overflow: hidden;
+}
+.agenda-section .event-item a .event-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.agenda-section .event-item a h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #333;
+}
+.agenda-section .event-item a p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.agenda-section .event-item a .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.agenda-section .event-item a .btn:hover {
+  background-color: #1e7e34;
+}
+.agenda-section .event-item a:hover img {
+  transform: scale(1.05);
+}
+.agenda-section .event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.agenda-section .posted-on,
+.agenda-section .author,
+.agenda-section .edit-link {
+  display: none;
+}
+.agenda-section .view-all-events {
+  margin-top: 3rem;
+  text-align: center;
+}
+.agenda-section .view-all-events .btn {
+  padding: 1rem 2rem;
+  background-color: #28a745;
   color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.agenda-section .view-all-events .btn:hover {
+  background-color: #1e7e34;
+}
+@media (max-width: 768px) {
+  .agenda-section .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .agenda-section .event-item {
+    padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .agenda-section .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.publications-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+.publications-section .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.publications-section .section-title .sur-titre {
+  font-size: 4rem;
+  color: #555;
+  margin-top: 4rem;
+  margin-right: 15rem;
+}
+.publications-section .section-title .sur-titre i {
+  margin-right: 0.5rem;
+}
+.publications-section .section-title h2 {
+  font-size: 5rem;
+}
+.publications-section .section-title h2 span {
+  color: #111;
+}
+.publications-section .publications-placeholder {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+.single-evenement {
+  padding: 2rem 1rem;
+}
+.single-evenement .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.single-evenement .breadcrumb {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+.single-evenement .breadcrumb a {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.single-evenement .breadcrumb a:hover {
+  color: #0056b3;
+}
+.single-evenement .breadcrumb span {
+  color: #333;
+  font-weight: bold;
+}
+.single-evenement .event-details {
+  text-align: center;
+}
+.single-evenement .event-details h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  color: #0b555a;
+}
+.single-evenement .event-details .event-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 2rem;
+}
+.single-evenement .event-details .event-date i {
+  margin-right: 0.5rem;
+}
+.single-evenement .event-details .event-image {
+  margin-bottom: 2rem;
+}
+.single-evenement .event-details .event-image img {
+  max-width: 85%;
+  border-radius: 25px;
+}
+.single-evenement .event-details .event-meta {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 1.2rem 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+.single-evenement .event-details .event-meta p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.single-evenement .event-details .event-meta p i {
+  color: #28a745;
+  margin-right: 0.5rem;
+}
+.single-evenement .event-details .event-meta p strong {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+}
+.single-evenement .event-details .event-description {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #333;
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+}
+.single-evenement .event-details .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.single-evenement .event-details .btn:hover {
+  background-color: #218838;
+}
+
+.archive-evenements {
+  padding: 6rem 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.archive-evenements .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.archive-evenements .archive-header {
+  margin-bottom: 4rem;
+}
+.archive-evenements .archive-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.archive-evenements .archive-header .result-count {
+  font-size: 1.5rem;
+  color: #777;
+}
+.archive-evenements .evenements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.archive-evenements .evenement-item {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.archive-evenements .evenement-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.archive-evenements .evenement-item a .evenement-img {
+  height: 200px;
+  overflow: hidden;
+}
+.archive-evenements .evenement-item a .evenement-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.archive-evenements .evenement-item a .evenement-content {
+  padding: 1rem;
+}
+.archive-evenements .evenement-item a .evenement-content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.archive-evenements .evenement-item a .evenement-content .evenement-date {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+.archive-evenements .evenement-item a .evenement-content .evenement-date p {
+  margin-bottom: 0.5rem;
+}
+.archive-evenements .evenement-item a .evenement-content p {
+  font-size: 1.2rem;
+  color: #777;
+}
+.archive-evenements .evenement-item:hover {
+  transform: translateY(-10px);
+}
+.archive-evenements .pagination {
+  margin-top: 4rem;
+}
+
+.mes-demarches-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0b555a;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.demarches-section {
+  padding: 2rem 0;
+  background: #f8f9fa;
+}
+.demarches-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background-color: #0b555a;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  display: inline-block;
+}
+
+.demarches-list {
+  list-style: none;
+  padding: 0;
+}
+.demarches-list li {
+  margin-bottom: 0.75rem;
+}
+.demarches-list li a {
+  color: #0b555a;
+  text-decoration: none;
+  font-weight: bold;
+}
+.demarches-list li a::before {
+  content: "›";
+  margin-right: 0.5rem;
+  color: #0b555a;
+  font-size: 1.2rem;
+}
+.demarches-list li a:hover {
+  text-decoration: underline;
 }
 
 body {

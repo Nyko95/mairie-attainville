@@ -1,10 +1,16 @@
 // Importation des variables
 @import "./theme";
+@import "./composants/header";
 @import "./composants/_hero.scss";
 @import "./composants/_services-carousel";
 @import "./composants/actus";
 @import "./composants/single";
 @import "./composants/archive-actualites";
+@import "./composants/agenda";
+@import "./composants/publications";
+@import "./composants/evenement";
+@import "./composants/archive-evenements";
+@import "./composants/demarches-section";
 
 // Styles globaux
 body {

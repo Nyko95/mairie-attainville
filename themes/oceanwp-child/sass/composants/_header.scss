@@ -1,0 +1,15 @@
+#site-navigation-wrap .dropdown-menu > li.menu-important > a {
+  background-color: #0b555a !important;
+  color: white !important;
+  padding: 0.3rem 1rem !important;
+  margin-top: -6px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: transparent !important;
+    color: #0b555a !important;
+  }
+}
